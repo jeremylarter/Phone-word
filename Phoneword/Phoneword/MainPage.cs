@@ -24,11 +24,13 @@ namespace Phoneword
                 Text = "Translate"
             };
             TranslateButton.Clicked += OnTranslate;
+
             CallButton = new Button
             {
                 Text = "Call",
                 IsEnabled = false
             };
+            CallButton.Clicked += OnCall;
 
             Content = new StackLayout
             {
@@ -48,6 +50,15 @@ namespace Phoneword
                     CallButton
                 }
             };
+        }
+
+        private async void OnCall(object sender, EventArgs e)
+        {
+            if (await DisplayAlert("Dial a number", "Would you like to call " + TranslatedNumber + "?", "Yes", "No"))
+            {
+
+                
+            }
         }
 
         private void OnTranslate(object sender, EventArgs e)

@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="IDialer.cs" />
     <Compile Include="MainPage.cs" />
     <Compile Include="PhonewordTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
