@@ -56,8 +56,9 @@ namespace Phoneword
         {
             if (await DisplayAlert("Dial a number", "Would you like to call " + TranslatedNumber + "?", "Yes", "No"))
             {
-
-                
+                var dialer = DependencyService.Get<IDialer>();
+                if (dialer != null)
+                    dialer.Dial(TranslatedNumber);
             }
         }
 
